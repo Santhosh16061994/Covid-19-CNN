@@ -1,1 +1,1 @@
-# Covid-19-CNN
+# covid_19_disease_detection
