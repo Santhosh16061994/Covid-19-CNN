@@ -24,31 +24,27 @@ def main():
 
     image_object = st.file_uploader("Upload the X-ray", type=["png", "jpg", "jpeg"])
 
-   if image_object is not None:
+    if image_object is not None:
+        radiography_img = Image.open(image_object)
 
-    radiography_img = Image.open(image_object)
+        img_temp_file = 'radiography-tmp.' + radiography_img.format
+        radiography_img.save(img_temp_file)
 
-    img_temp_file = 'radiography-tmp.' + radiography_img.format
+        keras_img_object = keras.preprocessing.image.load_img(img_temp_file, target_size=(256, 256))
+        img_array = keras.preprocessing.image.img_to_array(keras_img_object)
+        img_array = img_array / 255.0
+        img_array = img_array.reshape(-1, 256, 256, 1)
 
-    radiography_img.save(img_temp_file)
-
-    keras_img_object = keras.preprocessing.image.load_img(img_temp_file, target_size=(256, 256))
-
-    img_array = keras.preprocessing.image.img_to_array(keras_img_object)
-    img_array = img_array / 255.0
-    img_array = img_array.reshape(-1, 256, 256, 1)
-        
         predictions = covid19_model.predict(img_array)
         final_prediction_array = predictions[0]
-        
+
         class_names = ['COVID-19', 'NORMAL', 'VIRAL PNEUMONIA']
-        
+
         prediction = class_names[np.argmax(final_prediction_array)]
         probability = 100 * np.max(final_prediction_array)
-        
+
         st.image(radiography_img, width=250)
         st.write(f'Prediction: {prediction} - Probability: {probability:.4f}')
-                       
 
 if __name__ == '__main__':
     main()
