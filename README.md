@@ -20,3 +20,6 @@ The project follows these key steps:
 7. Fine-tuning and Improvement: Continuously refine the model by incorporating user feedback and additional data. Enhance the model's accuracy and generalization through architectural adjustments, hyperparameter tuning, and even leveraging transfer learning techniques.
 
 By creating an accurate COVID-19 detection system based on X-ray images, this project aims to provide valuable support to healthcare professionals in promptly identifying COVID-19 cases. This can contribute to early diagnosis, timely intervention, and effective management of the disease.
+
+
+WebApp link : https://covid-19-cnn-kmqv3llfssg.streamlit.app/
