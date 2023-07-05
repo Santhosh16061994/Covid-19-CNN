@@ -36,3 +36,5 @@ The trained CNN model can be deployed in a web application or integrated into ex
 ### Streamlit Web Application: The model is deployed using Streamlit, a Python library for creating web applications. The Streamlit application allows users to easily upload their X-ray images and receive predictions from the CNN model in real-time.
 ### User-friendly Interface: The web application provides a user-friendly interface with a simple and intuitive design. Users can upload their X-ray images through the application, and the predictions, along with associated probabilities, are displayed instantly.
 ### Convenient Deployment: The entire project, including the model and the web application, is deployed and hosted on a server, making it accessible to users from anywhere. The application can be accessed through a web browser without the need for any additional software installation.
+
+**Web app Link: https://covid-19-cnn-kmqv3llfssg.streamlit.app/ **
