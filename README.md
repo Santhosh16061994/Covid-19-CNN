@@ -37,4 +37,4 @@ The trained CNN model can be deployed in a web application or integrated into ex
 ### User-friendly Interface: The web application provides a user-friendly interface with a simple and intuitive design. Users can upload their X-ray images through the application, and the predictions, along with associated probabilities, are displayed instantly.
 ### Convenient Deployment: The entire project, including the model and the web application, is deployed and hosted on a server, making it accessible to users from anywhere. The application can be accessed through a web browser without the need for any additional software installation.
 
-**Web app Link: https://covid-19-cnn-kmqv3llfssg.streamlit.app/ **
+Web app Link: https://covid-19-cnn-kmqv3llfssg.streamlit.app/
